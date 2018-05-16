@@ -1,0 +1,19 @@
+>>> Sada testovacich SQL dotazu: update
+UPDATE MyGuests SET lastname='Doe' WHERE id=2;
+UPDATE LOW_PRIORITY MyGuests SET lastname='Doe' WHERE id=2;
+UPDATE IGNORE MyGuests SET lastname='Doe' WHERE id=2;
+UPDATE LOW_PRIORITY IGNORE MyGuests SET lastname='Doe' WHERE id=2;
+UPDATE IGNORE MyGuests SET lastname = DEFAULT WHERE id=2;
+UPDATE IGNORE MyGuests SET MyGuests.lastname = DEFAULT WHERE id=2;
+UPDATE tab1, tab2 SET column1 = DEFAULT, column2 = DEFAULT WHERE tab1.id = tab2.id;
+UPDATE tab1, tab2 SET tab1.column1 = DEFAULT, tab1.column2 = DEFAULT WHERE tab1.id = tab2.id;
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE id=100;
+UPDATE tab1, tab2 SET tab1.column1 = value1, tab1.column2 = value2 WHERE tab1.id = tab2.id;
+UPDATE LOW_PRIORITY tab1, tab2 SET tab1.column1 = value1, tab1.column2 = value2 WHERE tab1.id = tab2.id;
+UPDATE IGNORE tab1, tab2 SET tab1.column1 = value1, tab1.column2 = value2 WHERE tab1.id = tab2.id;
+UPDATE LOW_PRIORITY IGNORE tab1, tab2 SET tab1.column1 = value1, tab1.column2 = value2 WHERE tab1.id = tab2.id;
+UPDATE tableA,tableB SET tableA.color=tableB.color WHERE tableA.id=tableB.id;
+UPDATE table_name SET column1 = value1, column2 = value2 ORDER BY id;
+UPDATE table_name SET column1 = value1, column2 = value2 LIMIT 2;
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE id=100 ORDER BY id LIMIT 25;
+UPDATE seq SET x='z' WHERE x='b' ORDER BY i DESC LIMIT 1;

@@ -1,0 +1,28 @@
+>>> Sada testovacich SQL dotazu: cisla
+# Binarni retezce
+SELECT 0b1000001;
+SELECT b'1000001';
+SELECT B'1000001';
+# Hexadecimalni retezce
+SELECT x'61';
+SELECT X'61';
+SELECT 0x61;
+SELECT 0 + 0xF;
+# Cela a realna cisla
+SELECT 10;
+SELECT +10;
+SELECT -10;
+SELECT 0.1;
+SELECT .1;
+SELECT +0.1;
+SELECT +.1;
+SELECT 0.2E3;
+SELECT .2e3;
+SELECT .2e+2;
+SELECT 1.1e-10;
+SELECT -1.1e10;
+# Bool
+SELECT * FROM atbl where b=TRUE;
+SELECT * FROM atbl where b=FALSE;
+SELECT * FROM atbl where b=UNKNOWN;
+SELECT * FROM atbl where b=NULL;

@@ -1,0 +1,12 @@
+>>> Sada testovacich SQL dotazu: union
+SELECT 1 + 1 UNION SELECT 2;
+SELECT 1 + 1 UNION ALL SELECT 2;
+SELECT 1 + 1 UNION DISTINCT SELECT 2;
+SELECT * FROM authors WHERE AuthorID = -1 union select 1,2,3,4,5,6 from author;-- 
+SELECT * FROM authors WHERE AuthorID = -1 union select 1,concat(authorid,0x3A,email,0x3A,password),3,4,5,6 from authors;-- 
+(SELECT e_name AS name, email FROM employees) UNION (SELECT c_name AS name, email FROM customers);
+(SELECT 'John Doe' AS name, 'john.doe@example.net' AS email) UNION (SELECT name, email FROM customers);
+(SELECT name, email FROM employees) UNION (SELECT name, email FROM customers) ORDER BY name;
+(SELECT a FROM t1 WHERE a=10 AND B=1) UNION (SELECT a FROM t2 WHERE a=11 AND B=2) ORDER BY a LIMIT 10;
+SELECT 1 UNION SELECT 2 UNION SELECT 3;
+SELECT 1 UNION SELECT 2 UNION (SELECT 3) LIMIT 10 OFFSET 25;

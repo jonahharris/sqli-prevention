@@ -1,0 +1,5 @@
+>>> Sada testovacich SQL dotazu: drop
+DATABASE authors;DROP 0;STMT;1;0;
+DATABASE authors;DROP 0;STMT;1;0;
+DATABASE authors;DROP 1;STMT;1;0;
+DATABASE authors;DROP 1;STMT;1;0;

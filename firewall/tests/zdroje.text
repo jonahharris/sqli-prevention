@@ -1,0 +1,12 @@
+>>> Zdroje pro tvorbu testu
+# SQL testy
+https://mariadb.com/kb/en/library/documentation/
+https://dev.mysql.com/doc/refman/8.0/en/
+
+# SQLi testy
+https://mariadb.com/kb/en/library/documentation/
+https://dev.mysql.com/doc/refman/8.0/en/
+https://www.youtube.com/watch?v=7H358PrFagc
+http://www.tizag.com/mysqlTutorial/mysql-php-sql-injection.php
+https://www.itnetwork.cz/php/bezpecnost/tutorial-bezpecnost-v-php-utok-sql-injection-a-obrana
+https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet

@@ -1,0 +1,14 @@
+>>> Sada testovacich SQL dotazu: retezce
+SELECT 'MariaDB\'s new features';
+SELECT 'I''m here';
+SELECT """What?""";
+SELECT 'Hellooo\"';
+SELECT 'Tab \t tab';
+SELECT 'New \n line';
+SELECT 'Null \0 char';
+SELECT 'Backspace \b char';
+SELECT 'New \n\r line with carriage return';
+SELECT 'Control+Z \Z here';
+SELECT 'Backslash \\ char';
+SELECT 'Percent \% char';
+SELECT 'Underline \_ char';

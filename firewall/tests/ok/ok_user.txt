@@ -1,0 +1,113 @@
+>>> Soubor SQL OK dotazu neobsahujici SQLi
+# Case-sensitivity
+14
+# Obecne identifikatory
+42
+42
+42
+42
+42
+42
+42
+42
+42
+42
+42
+42
+42
+42
+42
+t1
+t1.*
+aaa
+*
+1 + 1
+# Join
+test`.t2; -- 
+test`.`t2`; -- 
+b
+t2.b
+t2.b
+t2.b
+t2.b
+id
+# Create database
+utf8
+utf8
+utf8
+utf8
+utf8
+utf8
+utf8
+# Create table
+t2
+# Alter database
+utf8
+utf8
+utf8
+utf8
+utf8
+# Drop database
+db1
+db1
+db1
+# Select
+1
+i
+DESC
+ASC
+
+0
+col_name
+14
+Name
+t1
+# Union
+t2
+t1
+a
+25
+25
+14
+# Insert
+42
+myname
+mysurname
+mycity
+mynaaaame
+secret
+newsecret
+# Update
+John
+14
+25
+id
+100
+value2
+secret
+column2
+# Drop table
+t1
+t2
+# Truncate table
+t1
+t2
+# Delete table
+t1
+42
+42
+t2`.`id
+t1
+t2
+# Replace table
+2
+2
+b
+t2
+t1
+# AuthorID (numercika hodnota)
+1
+Terry
+Ter;ry
+\' OR 1-- \'
+\'; DELETE FROM authors WHERE 1 or name = \'

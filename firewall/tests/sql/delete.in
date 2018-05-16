@@ -1,0 +1,22 @@
+>>> Sada testovacich SQL dotazu: delete
+# drop table
+DROP TABLE Employees, Customers;
+DROP TEMPORARY TABLE authors;
+DROP TABLE IF EXISTS t1;
+DROP TABLE IF EXISTS t1, t2, t3 WAIT 14;
+DROP TABLE IF EXISTS t1, t2 NOWAIT;
+DROP TABLE IF EXISTS t1, t2 RESTRICT;
+DROP TABLE IF EXISTS t1, t2 CASCADE;
+DROP TABLE IF EXISTS t1, t2, t3 WAIT 14 CASCADE;
+# delete table
+DELETE FROM page_hit ORDER BY timestmp LIMIT 1000000;
+DELETE FROM t;
+DELETE post FROM blog INNER JOIN post WHERE blog.id = post.blog_id;
+DELETE FROM MyGuests WHERE id=3;
+# Truncate
+truncate authors;
+truncate table authors;
+truncate table authors nowait;
+truncate table authors wait 5;
+truncate authors nowait;
+truncate authors wait 5;

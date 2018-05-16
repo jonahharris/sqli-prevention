@@ -1,0 +1,19 @@
+>>> Sada testovacich SQL dotazu: insert
+INSERT INTO a(b, c) VALUES(1 ,2);
+INSERT INTO t1 VALUES (10,10), (20,20);
+INSERT LOW_PRIORITY INTO a(b, c) VALUES(1 ,2);
+INSERT DELAYED INTO a(b, c) VALUES(1 ,2);
+INSERT HIGH_PRIORITY INTO a(b, c) VALUES(1 ,2);
+INSERT LOW_PRIORITY IGNORE INTO a(b, c) VALUES(1 ,2);
+INSERT DELAYED IGNORE INTO a(b, c) VALUES(1 ,2);
+INSERT HIGH_PRIORITY IGNORE INTO a(b, c) VALUES(1 ,2);
+INSERT IGNORE INTO a(b, c) VALUES(1 ,2);
+INSERT INTO person (first_name, last_name) VALUES ('John', 'Doe');
+INSERT INTO tbl_name VALUES (1, "row 1"), (2, "row 2");
+INSERT INTO person SET first_name = 'John', last_name = 'Doe';
+INSERT INTO contractor SELECT * FROM person WHERE status = 'c';
+INSERT INTO a (b, c) VALUES (1,"2004-08-09", 15) ON DUPLICATE KEY UPDATE c = c + 15;
+INSERT INTO person SET first_name = DEFAULT;
+INSERT INTO person SET person.first_name = DEFAULT;
+INSERT INTO person SET first_name = DEFAULT, last_name = DEFAULT;
+INSERT INTO person SET person.first_name = DEFAULT, person.last_name = DEFAULT;

@@ -1,0 +1,113 @@
+>>> Soubor SQL OK dotazu neobsahujici SQLi
+# Case-sensitivity
+database db1 - - -; table Table1 select - - -; table TableN select - - -; stmt 2;
+# Obecne identifikatory
+database db1 - - -; table abc select - - -; stmt 1;
+database db1 - - -; table 1abc select - - -; stmt 1;
+database db1 - - -; table $abc select - - -; stmt 1;
+database db1 - - -; table ab$cd select - - -; stmt 1;
+database db1 - - -; table ab_cd select - - -; stmt 1;
+database db1 - - -; table 123% select - - -; stmt 1;
+database db1 - - -; table TABLE select - - -; stmt 1;
+database db1 - - -; table čeština select - - -; stmt 1;
+database db1 - - -; table t2.čeština select - - -; stmt 1;
+database db1 - - -; table abc"d select - - -; stmt 1;
+database db1 - - -; table * select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+# Join
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select insert - -; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select - update -; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select - - delete; table t2 select - - - ; stmt 1;
+database test - - -; table t1 select insert update delete; table t2 select - - - ; stmt 1;
+# Create database
+database db1 create - -; stmt 1;
+database db1 create alter -; stmt 1;
+database db1 create - delete; stmt 1;
+database db1 create - -; table t1 - - - -; stmt 2;
+database db1 create alter -; stmt 2;
+database db1 create - drop; stmt 2;
+database db1 create alter drop; stmt 3;
+# Create table
+database test create - -; table t1 select - - -; table t2 - - - - ; stmt 1;
+# Alter database
+database db1 - alter -; stmt 1;
+database db1 create alter -; stmt 1;
+database db1 - alter delete; stmt 1;
+database db1 create alter -; table t1 - - - -; stmt 2;
+database db1 - alter drop; stmt 2;
+# Drop database
+database db1 - - drop; stmt 1;
+database db1 - alter drop; stmt 1;
+database db1 create alter drop; stmt 1;
+# Select
+database test - - -; table t1 - - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+database test - - -; table t1 select - - -; stmt 1;
+# Union
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 2;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 2;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 2;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 2;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 2;
+database test - - -; table t1 select - - -; table t2 select - - - ; stmt 2;
+# Insert
+database test - - -; table t1 - insert - -; stmt 1;
+database test - - -; table t1 - insert - -; stmt 1;
+database test - - -; table t1 select insert - -; stmt 2;
+database test - - -; table t1 select insert update -; stmt 2;
+database test - - -; table t1 - insert - -; table t2 select - - - ; stmt 2;
+database test create - -; table t1 - insert - -; stmt 2;
+database test create - -; table t1 - insert - -; table t2 select - - - ; stmt 3;
+# Update
+database test - - -; table t1 - - update -; stmt 1;
+database test - - -; table t1 - - update -; stmt 1;
+database test - - -; table t1 select - update -; stmt 1;
+database test - - -; table t1 - insert update -; stmt 1;
+database test - - -; table t1 - - update delete; stmt 1;
+database test - - -; table t1 select - update -; stmt 1;
+database test - - -; table t1 - insert update -; stmt 1;
+database test - - -; table t1 slect insert update -; stmt 1;
+# Drop table
+database test - - -; table t1 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; table t2 - - - delete; stmt 1;
+# Truncate table
+database test - - -; table t1 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; table t2 - - - delete; stmt 1;
+# Delete table
+database test - - -; table t1 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; table t2 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; table t2 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; table t2 - - - delete; stmt 1;
+database test - - -; table t1 - - - delete; table t2 - - - delete; stmt 1;
+# Replace table
+database test - - -; table t1 - insert - delete; stmt 1;
+database test - - -; table t1 - insert - delete; stmt 1;
+database test - - -; table t1 - insert - delete; stmt 1;
+database test - - -; table t1 - insert - delete; table t2 select insert - delete; stmt 1;
+database test - - -; table t1 - insert - delete; table t2 select insert - delete; stmt 1;
+# AuthorID (numercika hodnota)
+database sqli_prevention - - -; table authors select - - -; stmt 1;
+database sqli_prevention - - -; table authors select - - -; stmt 1;
+database sqli_prevention - - -; table authors select - - -; stmt 1;
+database sqli_prevention - - -; table authors select - - -; stmt 1;
+database sqli_prevention - - -; table authors select - - -; stmt 1;

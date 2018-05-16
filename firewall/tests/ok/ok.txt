@@ -1,0 +1,113 @@
+>>> Soubor SQL OK dotazu neobsahujici SQLi
+# Case-sensitivity
+(SELECT a FROM Table1 WHERE a=*** AND b=1) UNION (SELECT a FROM TableN WHERE a=11 AND b=2) ORDER BY a LIMIT 10;
+# Obecne identifikatory
+SELECT * FROM abc WHERE a=***;
+SELECT * FROM 1abc WHERE a=***;
+SELECT * FROM $abc WHERE a=***;
+SELECT * FROM ab$cd WHERE a=***;
+SELECT * FROM ab_cd WHERE a=***;
+SELECT * FROM `123%` WHERE a=***;
+SELECT * FROM `TABLE` WHERE a=***;
+SELECT * FROM `čeština` WHERE a=***;
+SELECT * FROM t2.`čeština` WHERE a=***;
+SELECT * FROM `abc"d` WHERE a=***;
+SELECT * FROM `*` WHERE a=***;
+SELECT t1.i FROM t1 WHERE i=***;
+SELECT test.t1.i FROM t1 WHERE i=***;
+SELECT test . t1 . i FROM t1 WHERE i=***;
+SELECT t1.i FROM test.t1 WHERE i=***;
+SELECT * FROM `***`;
+SELECT *** FROM t1;
+SELECT `***` FROM t1;
+SELECT '***' FROM t1;
+SELECT '***' FROM t1;
+# Join
+SELECT * FROM t1 NATURAL JOIN `***`;
+SELECT * FROM t1 NATURAL JOIN `***`;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON t1.a = t2.`***`;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON t1.a = ***;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON t1.a = ***;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON t1.a = ***;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON t1.a = ***;
+SELECT * FROM t1 LEFT JOIN t2 USING (`***`);
+# Create database
+CREATE DATABASE db1 CHARACTER SET = '***';
+CREATE DATABASE db1 CHARACTER SET = '***';
+CREATE OR REPLACE DATABASE db1 DEFAULT COLLATE '***';
+CREATE DATABASE IF NOT EXISTS db1 CHARACTER SET = '***';CREATE TABLE t1(a INT(6), b CHAR);
+CREATE DATABASE db1; ALTER DATABASE db1 CHARACTER SET = '***';
+CREATE DATABASE db1 CHARACTER SET = '***'; DROP database db1;
+CREATE DATABASE db1; ALTER DATABASE db1 CHARACTER SET = '***'; DROP database db1;
+# Create table
+CREATE TABLE t1 like `***`;
+# Alter database
+ALTER DATABASE db1 CHARACTER SET = '***';
+ALTER DATABASE db1 CHARACTER SET = '***';
+ALTER DATABASE db1 CHARACTER SET = '***';
+ALTER DATABASE db1 CHARACTER SET = '***';CREATE TABLE t1(a INT(6), b CHAR);
+ALTER DATABASE db1 CHARACTER SET = '***'; DROP database db1;
+# Drop database
+DROP DATABASE `***`;
+DROP SCHEMA IF EXISTS `***`;
+DROP SCHEMA IF EXISTS `***`;
+# Select
+SELECT 1 + ***;
+SELECT * FROM t1 ORDER BY `***`;
+SELECT * FROM t1 ORDER BY i ***;
+SELECT * FROM t1 ORDER BY i ***;
+SELECT * FROM t1 ORDER BY i ***;
+SELECT col_name FROM t1 WHERE col_name > ***;
+SELECT col_name FROM t1 WHERE `***` > 0;
+SELECT * FROM t1 LIMIT ***;
+SELECT `***` FROM t1 LIMIT 25;
+SELECT * FROM `***` LIMIT 25;
+# Union
+SELECT * FROM t1 UNION SELECT * FROM `***`;
+SELECT * FROM `***` UNION SELECT * FROM t2;
+SELECT * FROM t1 UNION SELECT * FROM t2 ORDER BY `***`;
+SELECT * FROM t1 UNION SELECT * FROM t2 LIMIT ***;
+SELECT * FROM t1 UNION SELECT * FROM t2 LIMIT *** OFFSET 5;
+SELECT * FROM t1 UNION SELECT * FROM t2 LIMIT 25 OFFSET ***;
+# Insert
+INSERT IGNORE INTO t1(b, c) VALUES(1 ,***);
+INSERT IGNORE INTO t1(b, c) VALUES(1 ,'***');
+INSERT IGNORE INTO t1(b, c) VALUES(1 ,'***'); SELECT * FROM t1;
+INSERT IGNORE INTO t1(b, c) VALUES(1 ,'***'); SELECT * FROM t1;
+INSERT IGNORE INTO t1(b, c) VALUES(1 ,'***'); SELECT * FROM t2;
+CREATE TABLE t1(a INT(6), b VARCHAR(42)); INSERT INTO t1(a, b) VALUES(14, '***');
+CREATE TABLE t1(a INT(6), b VARCHAR(42)); INSERT INTO t1(a, b) VALUES(14, '***'); SELECT * FROM t2;
+# Update
+UPDATE t1 SET lastname='***' WHERE id=2;
+UPDATE t1 SET lastname='Joe' WHERE id=***;
+UPDATE t1 SET column1 = value1, column2 = value2 WHERE id=100 ORDER BY id LIMIT ***;
+UPDATE t1 SET column1 = value1, column2 = value2 WHERE id=100 ORDER BY '***' LIMIT 25;
+UPDATE t1 SET column1 = value1, column2 = value2 WHERE id=*** ORDER BY id LIMIT 25;
+UPDATE t1 SET column1 = value1, column2 = *** WHERE id=100 ORDER BY id LIMIT 25;
+UPDATE t1 SET column1 = value1, column2 = '***' WHERE id=100 ORDER BY id LIMIT 25;
+UPDATE t1 SET column1 = value1, `****` = value2 WHERE id=100 ORDER BY id LIMIT 25;
+# Drop table
+DROP TABLE IF EXISTS `***`;
+DROP TABLE IF EXISTS t1, `***`;
+# Truncate table
+TRUNCATE TABLE `***`;
+TRUNCATE TABLE `***` NOWAIT;
+# Delete table
+DELETE FROM `***`;
+DELETE FROM t1 WHERE id=***;
+DELETE t1 FROM t2 INNER JOIN t1 WHERE t2.id = ***;
+DELETE t1 FROM t2 INNER JOIN t1 WHERE `***` = t1.id;
+DELETE t1 FROM t2 INNER JOIN `***`;
+DELETE t1 FROM `***` INNER JOIN t1;
+# Replace table
+REPLACE t1 VALUE (1, ***);
+REPLACE t1 SET a = 1, b = ***;
+REPLACE t1 SET a = 1, `***` = 2;
+REPLACE LOW_PRIORITY INTO t1 SELECT * FROM `***`;
+REPLACE LOW_PRIORITY INTO `***` SELECT * FROM t2;
+# AuthorID (numercika hodnota)
+SELECT * FROM authors WHERE AuthorID = ***;
+SELECT * FROM authors WHERE AuthorID = '***';
+SELECT * FROM authors WHERE AuthorID = '***';
+SELECT * FROM authors WHERE AuthorID = '***';
+SELECT * FROM authors WHERE AuthorID = '***';

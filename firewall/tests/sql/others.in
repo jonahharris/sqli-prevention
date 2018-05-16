@@ -1,0 +1,36 @@
+>>> Sada testovacich SQL dotazu: show
+# databases
+SHOW DATABASES;
+SHOW SCHEMAS;
+SHOW DATABASES LIKE 'm%';
+SHOW DATABASES WHERE Tables_in_test LIKE 'a%';
+SHOW SCHEMAS LIKE 'm%';
+SHOW SCHEMAS WHERE Tables_in_test LIKE 'a%';
+# tables
+SHOW TABLES;
+SHOW TABLES WHERE Tables_in_test LIKE 'a%';
+SHOW FULL TABLES;
+# describe
+DESCRIBE city;
+DESC authors;
+DESCRIBE city size;
+DESC authors name;
+# use
+USE db1;
+USE db2;
+# starts
+SELECT * FROM t1 WHERE id = ***;
+SELECT * FROM t1 WHERE id = '***';
+SELECT * FROM t1 LEFT JOIN t2 ON t1.id = t2.`***`;
+SELECT * FROM t1 LEFT JOIN t2 ON t1.id = `***`;
+SELECT *** FROM t2;
+SELECT '***' FROM t2;
+SELECT `***` FROM t2;
+SELECT `***`.* FROM t2;
+SELECT * FROM `***`;
+SELECT * FROM db1.`***`;
+SELECT * FROM `***`.tb1;
+SELECT * FROM t1 LEFT JOIN t2 USING (`***`);
+SELECT * FROM t1 ORDER BY `***` ASC;
+SELECT * FROM t1 ORDER BY '***' ASC;
+SELECT * FROM t1 ORDER BY i ***;

@@ -1,0 +1,29 @@
+>>> Sada testovacich SQL dotazu: identifikatory
+# Obecne identifikatory
+SELECT * FROM abc;
+SELECT * FROM 1abc;
+SELECT * FROM $abc;
+SELECT * FROM ab$cd;
+SELECT * FROM ab_cd;
+SELECT * FROM `123%`;
+SELECT * FROM `TABLE`;
+SELECT * FROM `čeština`;
+SELECT * FROM t2.`čeština`;
+SELECT * FROM `abc"d`;
+CREATE TABLE `*` (a INT);
+SELECT t1.i FROM t1;
+SELECT test.t1.i FROM t1;
+SELECT test . t1 . i FROM t1;
+SELECT t1.i FROM test.t1;
+# Uzivatelske promenne
+SELECT @x IS NULL;
+SELECT @`var_name` IS NULL;
+SELECT @'var_name' IS NULL;
+SELECT @"var_name" IS NULL;
+SET @a = 0;
+SET @a = 'SELECT * FROM A';
+SET @a.b = 42;
+SET @a$b = 444;
+SET @a_b = 111;
+SET @a = 1, @b = 2, @c = 3;
+SELECT @a, @b := @a + @b;

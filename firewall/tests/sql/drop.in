@@ -1,0 +1,5 @@
+>>> Sada testovacich SQL dotazu: drop
+DROP DATABASE authors;
+DROP SCHEMA authors;
+DROP DATABASE IF EXISTS authors;
+DROP SCHEMA IF EXISTS authors;

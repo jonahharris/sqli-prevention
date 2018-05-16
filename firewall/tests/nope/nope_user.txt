@@ -1,0 +1,134 @@
+>>> Soubor SQL dotazu obsahujici SQLi
+# Case-sensitivity
+1); SELECT * FROM Table1; -- 
+14 AND b=1) UNION (SELECT a FROM tableN WHERE a=11 AND b=2) ORDER BY a LIMIT 10; -- 
+# Obecne identifikatory
+1; SELECT * FROM test2.t1; -- 
+1; SELECT * FROM test.t2; -- 
+# Join
+t3
+test`.t3; -- 
+test`.`t3`; -- 
+test1`.t2; -- 
+b` OR t1.name = t1.name; -- 
+t2` NATURAL JOIN t3; -- 
+t2` NATURAL JOIN test.t3; -- 
+t3
+t3
+t3
+# Komentare
+1 OR 1; -- 
+1 OR 1; #
+# AuthorID
+1 OR 1
+1 OR 1 = 1
+1;show databases
+1; drop database sqli_prevention
+1; desc authors
+1 order by 1;-- 
+-1 union select 1,2,3,4,5,6 from information_schema.tables;-- 
+-1 union select 1,tables_names,3,4,5,6 from information_schema.tables;-- 
+-1 union select 1,name,3,4,5,6 from authors;-- 
+-1 union select 1,password,3,4,5,6 from authors;-- 
+-1 union select 1,concat(authorid,0x3A,email,0x3A,password),3,4,5,6 from authors;-- 
+' OR 1;-- '
+'; DELETE FROM authors WHERE 1 or name = '
+'; TRUNCATE authors NOWAIT; SELECT ';
+'; TRUNCATE TABLE authors;-- 
+'; TRUNCATE TABLE authors;-- 
+# Create
+1; CREATE DATABASE db1; -- 
+utf8'; ALTER DATABASE db1 CHARACTER SET = 'utf8'; -- 
+utf8'; DROP DATABASE db1; -- 
+utf8'; DROP DATABASE db1; -- 
+utf8'; ALTER DATABASE db1 CHARACTER SET = 'utf8'; -- 
+utf8'; DROP DATABASE db1; -- 
+utf8'; ALTER DATABASE db1 CHARACTER SET = 'utf8'; -- 
+utf8'; CREATE TABLE T1 (a INT(6), b CHAR); -- 
+# Create table
+t2
+t3
+1; CREATE OR REPLACE TABLE t1(a INT(125)); -- 
+# Alter
+utf8'; CREATE DATABASE db2; -- 
+utf8'; DROP DATABASE db1; -- 
+utf8'; ALTER DATABASE db2 CHARACTER SET = 'utf8'; -- 
+utf8'; CREATE TABLE T1 (a INT(6), b CHAR); -- 
+1; alter database character set 'utf8' collate 'utf8_bin'; -- 
+1; alter database abc character set 'utf8' collate 'utf8_bin'; -- 
+# Drop database
+db1`; SHOW DATABASES; -- 
+db1`; DROP DATABASE db2; -- 
+db1`; ALTER DATABASE db2 CHARACTER SET = 'utf8'; -- 
+# Select
+1 + 1
+i` ASC; -- 
+DESC; SELECT * FROM t1; -- 
+; SELECT * FROM t1; -- 
+; DROP SCHEMA test; -- 
+CONCAT(login, password)
+42; INSERT INTO t1 VALUES(1, 'mylogin', 'mypass', 1); -- 
+14; DROP SCHEMA test2; -- 
+Name` FROM t2; -- 
+t2
+test`.t2; -- 
+# Union
+t3
+t3
+a` UNION SELECT * FROM t3; -- 
+25; SELECT * FROM t1; -- 
+25; INSERT t1 VALUES(1, 'mylogin', 'mypass', 1); -- 
+14; DROP SCHEMA test2; -- 
+# Insert
+42); DROP TABLE test; -- 
+myname'); DROP TABLE test; -- 
+mysurname'); SELECT * FROM t2; -- 
+mycity'); SELECT * FROM t2 UNION SELECT * FROM t1; -- 
+mynaaaame'); SELECT * FROM t2 UNION SELECT * FROM t3; -- 
+secret'); DROP TABLE t1; -- 
+newsecret'); INSERT INTO t1(a, b) VALUES(1, 'mysecret'); -- 
+# Update
+John'; DROP TABLE t1; -- 
+14 OR 1; -- 
+25 OR 1 = 1; -- 
+id'; SELECT * FROM t1; -- 
+100; DROP SCHEMA test2; -- 
+22 OR 1 = 1; -- 
+secret'; INSERT t1 VALUES(1, 'mylogin', 'mypass', 1); -- 
+column2` = 'myPass' WHERE ID=1; -- 
+# Drop table
+t2
+t1`; DROP TABLE t2; -- 
+t3
+# Truncate table
+t2
+t1`; DROP TABLE t2; -- 
+t1`; TRUNCATE TABLE t2; -- 
+t3
+# Delete table
+t2
+42 OR 1 = 1; -- 
+42; DELETE FROM t1; -- 
+t2`.`id = 0 OR 1; -- 
+t3
+t3
+# Replace table
+2); DROP TABLE t1; -- 
+2; DROP TABLE t2; -- 
+b` = DEFAULT; TRUNCATE t2; -- 
+t3
+t2` SELECT * FROM t1; -- 
+# Show databases
+42; SHOW DATABASES; -- 
+42; SHOW SCHEMAS; -- 
+# Show tables
+42; SHOW TABLES; -- 
+42; SHOW FULL TABLES; -- 
+# Use
+42; USE db1; -- 
+42; USE test; -- 
+# Describe
+42; DESCRIBE t1; -- 
+42; DESCRIBE t1; -- 
+# Textove atributy
+' OR 1; -- 

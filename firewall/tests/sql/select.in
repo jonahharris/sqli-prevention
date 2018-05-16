@@ -1,0 +1,86 @@
+>>> Sada testovacich SQL dotazu: select
+SELECT 1 + 1;
+SELECT ALL name FROM authors;
+SELECT DISTINCT name FROM authors;
+SELECT DISTINCTROW name, surname FROM authors;
+select HIGH_PRIORITY name from authors;
+SELECT STRAIGHT_JOIN name FROM authors;
+SELECT SQL_SMALL_RESULT name FROM authors;
+SELECT SQL_BIG_RESULT name FROM authors;
+SELECT SQL_BUFFER_RESULT name FROM authors;
+SELECT SQL_CACHE name FROM authors;
+SELECT SQL_NO_CACHE name FROM authors;
+SELECT SQL_CALC_FOUND_ROWS name FROM authors;
+SELECT ALL HIGH_PRIORITY name FROM authors;
+SELECT ALL SQL_SMALL_RESULT name FROM authors;
+SELECT DISTINCT SQL_NO_CACHE name FROM authors;
+SELECT DISTINCT HIGH_PRIORITY SQL_SMALL_RESULT name FROM authors;
+SELECT DISTINCTROW HIGH_PRIORITY SQL_CACHE name FROM authors;
+SELECT DISTINCTROW HIGH_PRIORITY SQL_BIG_RESULT SQL_CACHE name FROM authors;
+select * from authors;
+select name from authors;
+select `name` from authors;
+SELECT `čas` FROM authors;
+# Select: slozene identifikatory
+SELECT t1.i FROM t1;
+SELECT t1 . i FROM t1;
+SELECT test.t1.i FROM t1;
+SELECT test . t1 . i FROM t1;
+SELECT t1.* FROM t1;
+SELECT * from sqli_prevention.authors;
+# Select: join
+SELECT * FROM t1, t2, t3;
+SELECT * FROM (SELECT t1, t2, t3) AS ts1;
+SELECT * FROM t1 STRAIGHT_JOIN t2;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON t1.a = t2.b;
+SELECT * FROM t1 STRAIGHT_JOIN t2 ON (t1.a = t2.b);
+SELECT * FROM a LEFT JOIN b USING (c1, c2, c3);
+SELECT * FROM t1 NATURAL JOIN t2;
+SELECT * FROM t1 JOIN t2 USING (j);
+SELECT * FROM table1 LEFT JOIN table2 USING (id);
+SELECT * FROM t1 NATURAL LEFT JOIN t2;
+SELECT * FROM t1 NATURAL RIGHT JOIN t2;
+SELECT * FROM a LEFT JOIN b ON a.c1 = b.c1 AND a.c2 = b.c2 AND a.c3 = b.c3;
+SELECT * FROM t1 JOIN t2 JOIN t3 ON (i1 = i3);
+SELECT t1.name, t2.salary FROM employee AS t1 INNER JOIN info AS t2 ON t1.name = t2.name;
+SELECT * FROM t1 LEFT JOIN (t2, t3, t4) ON (t2.a=t1.a AND t3.b=t1.b AND t4.c=t1.c);
+SELECT * FROM t1 LEFT JOIN (t2 CROSS JOIN t3 CROSS JOIN t4) ON (t2.a=t1.a AND t3.b=t1.b AND t4.c=t1.c);
+SELECT left_tbl.* FROM left_tbl LEFT JOIN right_tbl ON left_tbl.id = right_tbl.id WHERE right_tbl.id IS NULL;
+SELECT * FROM table1 LEFT JOIN table2 ON table1.id = table2.id LEFT JOIN table3 ON table2.id = table3.id;
+SELECT artist.name, COUNT(work.artist_id) AS number_of_works FROM artist LEFT JOIN work ON artist.id = work.artist_id GROUP BY artist.id;
+# Select: join + index
+SELECT * FROM table1 USE INDEX (col1_index,col2_index) WHERE col1=1 AND col2=2 AND col3=3;
+SELECT * FROM table1 IGNORE INDEX (col3_index) WHERE col1=1 AND col2=2 AND col3=3;
+SELECT * FROM t1 USE INDEX (i1) IGNORE INDEX FOR ORDER BY (i2);
+SELECT * FROM t1 USE INDEX (i1) IGNORE INDEX FOR ORDER BY (a);
+SELECT * FROM t1 USE INDEX (i1) USE INDEX (i1,i1);
+SELECT * FROM t1 USE INDEX FOR JOIN (i1) FORCE INDEX FOR JOIN (i2);
+SELECT * FROM t1 USE INDEX () IGNORE INDEX (i2) USE INDEX (i1) USE INDEX (i2);
+SELECT * FROM t1 USE INDEX (i1,i2) IGNORE INDEX (i2);
+SELECT * FROM t1 USE INDEX (i1) IGNORE INDEX (i2) USE INDEX (i2);
+# Select: where
+SELECT t1.name, t2.salary FROM employee AS t1, info AS t2 WHERE t1.name = t2.name;
+SELECT t1.name, t2.salary FROM employee t1, info t2 WHERE t1.name = t2.name;
+SELECT col_name FROM tbl_name WHERE col_name > 0;
+# Select: order by
+SELECT * FROM seq ORDER BY i;
+SELECT * FROM seq ORDER BY i DESC;
+SELECT * FROM seq ORDER BY i ASC;
+SELECT * FROM seq ORDER BY x,i;
+SELECT college, region, seed FROM tournament ORDER BY region, seed;
+SELECT college, region AS r, seed AS s FROM tournament ORDER BY r, s;
+SELECT college, region, seed FROM tournament ORDER BY 2, 3;
+# Select: group by
+SELECT 12 AS a, a FROM t GROUP BY a;
+SELECT a, COUNT(b) FROM test_table GROUP BY a ASC ORDER BY NULL;
+SELECT a, COUNT(b) FROM test_table GROUP BY a DESC;
+SELECT COUNT(col1) AS col2 FROM t GROUP BY col2 HAVING col2 = 2;
+# Select: having
+SELECT col_name FROM tbl_name HAVING col_name > 0;
+# Select: limit
+SELECT * FROM tbl LIMIT 5,10;
+SELECT * FROM tbl LIMIT 95,18446744073;
+SELECT * FROM tbl LIMIT 5;
+select * from authors limit 4 offset 3;
+# Select: alias
+SELECT columna columnb FROM mytable;

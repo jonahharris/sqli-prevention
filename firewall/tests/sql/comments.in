@@ -1,0 +1,5 @@
+>>> Sada testovacich SQL dotazu: komentare
+SELECT * FROM authors; # Toto je komentar
+SELECT * FROM authors; -- Toto je komentar
+SELECT * FROM authors; /* Toto je \nviceradkovy \nkomentar */
+select 1 /* + 1 */;
