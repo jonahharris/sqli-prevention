@@ -1,0 +1,106 @@
+% Tento soubor nahraďte vlastním souborem s přílohami (nadpisy níže jsou pouze pro příklad)
+% This file should be replaced with your file with an appendices (headings below are examples only)
+
+% Umístění obsahu paměťového média do příloh je vhodné konzultovat s vedoucím
+% Placing of table of contents of the memory media here should be consulted with a supervisor
+%\chapter{Obsah přiloženého paměťového média}
+
+%\chapter{Manuál}
+
+%\chapter{Konfigurační soubor} % Configuration file
+
+%\chapter{RelaxNG Schéma konfiguračního souboru} % Scheme of RelaxNG configuration file
+
+%\chapter{Plakát} % poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Příloha A
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Často používané pojmy} \label{app:concepts}
+Pro lepší přehlednost zde uvedeme i seznam pojmů z~bezpečnosti, které se v~nejhojnější míře vykytují v~této práci. Přestože budou pojmy vždy vysvětleny při prvním použití, pro praktičtější vyhledání se budeme v~dalších výskytech odkazovat na tuto přílohu. \\
+
+\textit{\textbf{Active threat}} -- \textit{aktivní hrozba} \label{app:a:activethreat} \\ %++ \\
+Jakákoliv hrozba úmyslné změny stavu systému zpracování dat nebo počítačové sítě. Hrozba, která by měla za následek modifikaci zpráv, vložení falešných zpráv, vydávání se za někoho jiného nebo odmítnutí služby \cite[str. 16]{Slovnik2015}. \\
+
+\textit{\textbf{Asset}} -- \textit{aktivum} \label{app:a:asset} \\
+Cokoliv, co má hodnotu pro jednotlivce, organizaci nebo veřejnou správu \cite[str. 17]{Slovnik2015}. \\
+
+\textit{\textbf{Attack}} -- \textit{útok} \label{app:a:attack} \\ %++ \\
+Pokus o~zničení, vystavení hrozbě, změnu, vyřazení z~činnosti, zcizení aktiva nebo získání neoprávněného přístupu k~aktivu nebo uskutečnění neoprávněného použití aktiva 
+\cite[\mbox{str. 121}]{Slovnik2015}.  \\
+
+\textit{\textbf{Attack surface}} -- \textit{bez překladu} \label{app:a:attacksurface} \\
+Kód v~počítačovém systému, který může být spuštěn neautorizovanými uživateli \cite[\mbox{str. 20}]{Slovnik2015}. 
+Český ekvivalent tohoto pojmu se ve Výkladovém slovníku kybernetické bezpečnosti \mbox{neuvádí} a proto tento termín nebude přeložen ani v~této práci. \\
+
+\textit{\textbf{Breach}} -- \textit{prolomení} \label{app:a:breach} \\ %++ \\
+Neoprávněné proniknutí do systému \cite[str. 92]{Slovnik2015}. \\
+
+\textit{\textbf{Covert Channel}} -- \textit{skrytý kanál} \label{app:a:covertchannel} \\ %++ \\
+Přenosový kanál, který může být použit pro přenos dat způsobem, který narušuje bezpečnostní politiku \cite[str. 104]{Slovnik2015}. \\
+
+\textit{\textbf{Common Vulnerabilities and Exposures (CVE)}} -- \textit{Společné zranitelnosti a vystavění hrozbám} \label{app:a:cve} \\ %++ \\
+CVE je seznam identifikátorů pro veřejně známé bezpečnostní zranitelnosti. Použití identifikátorů CVE, které jsou předěleny CVE číslovanými autoritami (CNA) z~celého světa, zajišťuje důvěru mezi stranami při diskusi a sdílení informací o~jedinečné chybě softwaru, poskytuje základnu pro hodnocení nástrojů, a umožňuje výměnu dat pro automatizaci \mbox{kybernetické} bezpečnosti \cite{CVEWeb}. \\
+
+\textit{\textbf{Data validation}} -- \textit{validace dat} \label{app:a:datavalidation} \\ %++ \\
+Proces používaný k~určení, zda data jsou přesná, úplná nebo splňují specifikovaná kritéria. Validace dat může obsahovat kontroly formátu, kontroly úplnosti, kontrolní klíčové testy, logické a limitní kontroly \cite[str. 122]{Slovnik2015}. \\
+
+\textit{\textbf{Disclosure}} -- \textit{odhalení} \label{app:a:disclosure} \\ %++ \\
+V~kontextu IT obvykle používáno k~vyjádření faktu, že byla odhalena data, informace nebo mechanismy, které na základě politik a technických opatření měly zůstat skryty \cite[str. 77]{Slovnik2015}. \\
+
+\textit{\textbf{Encryption}} -- \textit{šifrování} \label{app:a:encryption} \\ %++ \\
+Kryptografická transformace dat převodem do podoby, která je čitelná jen se speciální \mbox{znalostí} \cite[str. 115]{Slovnik2015}. \\
+
+\textit{\textbf{Exploit}} -- \textit{bez překladu} \label{app:a:exploit} \\
+Chyba, nebo chyby v~programu, software, příkazové sekvence nebo kód, který umožňuje uživateli používat programy, počítače nebo systémy neočekávaně nebo nepovoleným způsobem. Také bezpečnostní díra, nebo případ s~využitím bezpečnostní díry \cite[str. 135]{Slovnik2015}.  Přestože slovník obsahuje český překlad „zneužití“, autorka se přiklonila k~častější tendenci tento termín nepřekládat. \\
+
+\textit{\textbf{Intrusion detection systém (IDS)}} -- \textit{systém detekce průniku} \label{app:a:ids} \\ %++ \\
+Technický systém, který se používá pro zjištění, že byl učiněn pokus o~průnik nebo takový čin nastal, a je-li to možné, pro reakci na průnik do informačního systémů a sítí \cite[str. 114]{Slovnik2015}.  \\
+
+\textit{\textbf{Intrusion prevention systém (IPS)}} -- \textit{systém prevence průniku} \label{app:a:ips} \\ %++ \\
+Varianta systémů detekce průniku, které jsou zvláště určeny pro možnost aktivní reakce \cite[str. 114]{Slovnik2015}.  \\
+
+\textit{\textbf{Malformed query}} -- \textit{špatně utvořený dotaz} \label{app:a:malformedquery} \\ %++ \\
+(1) Chybný dotaz, který může vyvolat nestandardní nebo neočekávané chování systému.
+(2) Způsob útoku \cite[str. 115]{Slovnik2015}. \\
+
+\textit{\textbf{TOR (anonymity network)}} -- \textit{TOR (anonymní síť)} \label{app:a:tor} \\ %++ \\
+TOR je volný software pro anonymní komunikaci. Název je akronym odvozený z~původního názvu softwarového projektu, The Onion Router \cite[str. 118]{Slovnik2015}. \\ 
+
+\textit{\textbf{Passive threat}} -- \textit{pasivní hrozba} \label{app:a:passivethreat} \\ %++ \\
+Hrozba zpřístupnění informací, aniž by došlo ke změně stavu systému zpracování dat nebo počítačové sítě \cite[str. 82]{Slovnik2015}. \\ 
+
+\textit{\textbf{Patch}} -- \textit{záplata} \label{app:a:patch} \\ %++ \\
+Aktualizace, která odstraňuje bezpečnostní problém nebo nestabilní chování aplikace, \mbox{rozšiřuje} její možnosti či zvyšuje její výkon \cite[str. 133]{Slovnik2015}. \\
+
+\textit{\textbf{Penetration}} -- \textit{proniknutí/průnik} \label{app:a:penetration} \\ %++ \\
+Neautorizovaný přístup k~počítačovému systému, síti nebo službě \cite[str. 92]{Slovnik2015}. \\
+
+\textit{\textbf{SQL injection}} -- \textit{bez překladu} \label{app:a:sqlinjection} \\
+Injekční technika, která zneužívá bezpečnostní chyby vyskytující se v~databázové vrstvě aplikace.
+Tato chyba zabezpečení se projevuje infiltrací neoprávněných znaků do SQL příkazu oprávněného uživatele nebo převzetím uživatelova přístupu k~vykonání SQL příkazu \cite[str. 111]{Slovnik2015}. \\
+
+\textit{\textbf{Vulnerability}} -- \textit{zranitelnost} \label{app:a:vulnerability} \\ %* \\
+Slabé místo aktiva nebo opatření, které může být využito jednou nebo více hrozbami \cite[str. 136]{Slovnik2015}. \\
+
+\textit{\textbf{Weird machine}} -- \textit{podivný stroj} \label{app:a:weirdmachine} \\
+Výpočetní prostředí (vestavěné v~cílovém systému), které obsahuje podmnožinu skutečně možných stavů systémů (na rozdíl od platných stavů, které si představují konstruktéři a programátoři). Pokud chce útočník využít nějakého exploitu, provádí nastavení, instanciaci a programování podivného stroje, který je pak spuštěna přes vstup od útočníka. Škodlivý výpočet pak běží na podivném stroji uvnitř cíle \cite[str. 20]{Sass2011}. \\
+Pozn.: Překlad do českého jazyka byl vytvořen autorkou práce, protože k~pojmu nebyl \mbox{nalezen} ustálený ekvivalent. \\
+
+\textit{\textbf{X.509}} -- \textit{bez překladu} \label{app:a:x.509} \\ %++ \\
+Standard pro systémy založené na veřejném klíči (PKI) pro jednoduché podepisování. X.509 specifikujeme např. formát certifikátu, seznamy odvolaných certifikátů, 
+parametry \mbox{certifikátů} a metody kontroly platnosti certifikátů \cite[str. 130]{Slovnik2015}. \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Příloha B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Obsah CD} \label{app:cd}
+
+\section{Technická zpráva}
+Složka \texttt{documentation} obsahuje elektronickou verzi technické zprávy \texttt{xregec00.pdf} a podsložku \texttt{src} se zdrojovými soubory pro 
+její sestavení. Úspěšnost překladu byla testována na školním serveru \url{merlin.fit.vutbr.cz}.
+
+\section{Implementační část}
+Ve složce \texttt{firewall} se nachází implementace aplikace SQLi Firewall. Všechny potřebné informace pro překlad a zprovoznění jsou k dispozici
+v souboru \texttt{README.md}, nacházející se v kořenové složce disku. Součástí obsahu CD jsou rovněž sady testů, které lze spouštět přes automatizované
+skripty ze složky \texttt{firewall/tests}. 
