@@ -1,5 +1,6 @@
 %=========================================================================
 % (c) Michal Bidlo, Bohuslav Křena, 2008
+% Text napsala Dominika Regeciova
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1. Kapitola
@@ -22,8 +23,8 @@ nekonečný závod se záškodníky, kteří mají bohužel většinou náskok. 
 nových a nových zranitelností a chyb, jejich náročných oprav, abychom poté začali zase od znova? \\
 
 Myslím, že nejsem jediná, kdo vnímá celou situaci kolem bezpečnosti jako ve stavu odevzdané defenzivy. Jako by se experti smířili s~tím, že bezpečný 
-systém je něco jako \textit{jednorožec} ve světě techniky -- krásná, ale nerealistická záležitost. Proto není otázkou, zda se najdou chyby, ale kdy 
-se projeví a kdo je objeví první -- zda ti dobří, nebo zlí. Následně se chyba opraví, pokud možno dobře a zase nastává doba ticha před bouří. \\
+systém je něco jako \textit{jednorožec} ve světě techniky --- krásná, ale nerealistická záležitost. Proto není otázkou, zda se najdou chyby, ale kdy 
+se projeví a kdo je objeví první --- zda ti dobří, nebo zlí. Následně se chyba opraví, pokud možno dobře a zase nastává doba ticha před bouří. \\
 
 I~proto jsem byla překvapena, když jsem objevila článek \textit{Security Applications of Formal Language Theory} \cite{Sass2013}. Zde je totiž zmíněna 
 pro mě v~té době nová myšlenka: zranitelnosti a chyby v~systému jsou jako moc, kterou dáváme na pospas světu. A~dáváme ji dobrovolně. Například v~podobě 
@@ -55,7 +56,7 @@ Teorii formálních jazyků, ale nejen tu, bude provázet řada příkladů. Pro
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Teoretický úvod} \label{ch:theory}
 Teorie formálních jazyků představuje podstatnou součást teoretické informatiky. Pro~další kapitoly je porozumění této oblasti klíčové, především pak 
-určování algoritmické řešitelnosti -- tedy zda můžeme dosáhnout výsledků v~konečném čase. Než si ale vysvětlíme, jak zasahuje teorie formálních 
+určování algoritmické řešitelnosti --- tedy zda můžeme dosáhnout výsledků v~konečném čase. Než si ale vysvětlíme, jak zasahuje teorie formálních 
 jazyků do problematiky bezpečnosti, projdeme si nejdůležitější poznatky, kterých následně budeme hojně využívat. \\
 
 Ať už pracujeme s~přirozenými jazyky, jakými jsou například čeština a angličtina, nebo s~jinými, například programovacími, chápeme související pojem 
@@ -74,12 +75,12 @@ Prvek $(\alpha, \beta)$ množiny $P$ nazýváme \textit{přepisovacím pravidlem
 ve tvaru $\alpha \rightarrow \beta$. Řetězec $\alpha$ resp. $\beta$ nazývám \textit{levou} resp. \textit{pravou stranou} přepisovacího 
 pravidla \cite[str. 13]{TIN2013}. \\
 
-Řetězce generované z~počátečního symbolu a obsahující terminální i neterminální symboly, nazýváme \textit{větnými formami} \cite[str. 15]{TIN2013}. \\
+Řetězce generované z~počátečního symbolu a obsahující terminální i neterminální symboly nazýváme \textit{větnými formami} \cite[str. 15]{TIN2013}. \\
 
 \textbf{Jazyk} pak definujeme jako množinu všech řetězců generovaných gramatikou z~počátečního symbolu a obsahující pouze terminální symboly 
 (tzv. \textit{věty}) \cite[str. 15]{TIN2013}. \\
 
-Protože jsou jazyky množinami, lze nad nimi provádět operace, definované nad množinami.
+Protože jsou jazyky množinami, lze nad nimi provádět operace definované nad množinami.
 Můžeme určit sjednocení jazyků, jejich průnik, definovat komplement jazyka i jeho iteraci. Další operace nad jazyky jsou definovány následovně: \\
 
 \textbf{Konkatenace} \\
@@ -88,7 +89,7 @@ $L_1$ a $L_2$ je jazyk $L_1 \cdot L_2$ nad abecedou $\Sigma_1 \cup \Sigma_2$, je
 \begin{center}
 $L_1 \cdot L_2 = \{xy \ | \ x \in L_1, \ y \in L_2\}$
 \end{center}
-Operace součin jazyků je definována prostřednictvím konkatenace řetězců a má stejné vlastnosti jako konkatenace řetězců -- je asociativní 
+Operace součin jazyků je definována prostřednictvím konkatenace řetězců a má stejné vlastnosti jako konkatenace řetězců --- je asociativní 
 a nekomutativní \cite[str. 10]{TIN2013}. \\
 
 \textbf{Substituce jazyků} \\
@@ -110,7 +111,7 @@ nazveme morfismem nad slovy, platí-li $\forall w = a_1 a_2 \dots a_n \in \Sigma
 \textit{Morfismus jazyka} $h(L)$ pak definujeme jako $h(L) = \{h(w) \ | \ w \in L\}$. \\ 
 Morfismus jazyků je zvláštní případ substituce, kde každý substituovaný jazyk má právě jednu větu \cite[str. 95]{TIN2013}. \\
 
-Při práci s~jazyky a jejich třídami nás zajímá řada otázek, přičemž především potřebujeme vědět, zda na danou otázku dokážeme odpovědět a to 
+Při práci s~jazyky a jejich třídami nás zajímá řada otázek, přičemž především potřebujeme vědět, zda na danou otázku dokážeme odpovědět, a to 
 v~konečném čase. Pokud je můžeme vyřešit pomocí konečného algoritmického řešení, označujeme je jako \textit{rozhodnutelné problémy}. 
 V~opačném případě se jedná o~\textit{nerozhodnutelné problémy}. \\
 
@@ -168,9 +169,9 @@ pokus se $S$ neobjevuje na pravé straně žádného pravidla. Gramatika s~tímt
 gramatika \cite[str. 17]{TIN2013}. \\
 
 Jazyky generované těmito gramatikami nazýváme následovně: \textit{rekurzivně vyčíslitelné} \mbox{(typ 0)}, \textit{kontextové}
-(typ 1), \textit{bezkontextové} (typ2) a \textit{regulární} (typ 3). Pro třídy těchto jazyků $\pazocal{L}_i, i = 0, 1, 2, 3$ 
-platí $\pazocal{L}_0 \subset \pazocal{L}_1 \subset \pazocal{L}_2 \subset \pazocal{L}_3$ 
-\cite[str. 17]{TIN2013}. \\
+(typ 1), \textit{bezkontextové} (typ 2) a \textit{regulární} (typ 3). Pro třídy těchto jazyků $\pazocal{L}_i, i = 0, 1, 2, 3$ 
+platí $\pazocal{L}_3 \subset \pazocal{L}_2 \subset \pazocal{L}_1 \subset \pazocal{L}_0$ 
+\cite[str. 18]{TIN2013}, jak je naznačeno na obrázku \ref{fig:chomsky}. \\
 
 \begin{figure}[h!]
     \label{fig:chomsky}
@@ -208,7 +209,7 @@ do jazyka, či nikoliv. K~tomuto účelu nám slouží \textit{automaty}. \\
 \end{itemize}
 \vspace*{\baselineskip}
 Pro každý prvek $q$ z~$Q$ a libovolný prvek $\sigma \in \Sigma$, překládáme $\delta(q, \sigma)$
-jako stav, do kterého \mbox{konečný} automat (KA) přejde, pokud je ve stavu $q$ a na vstupu dostane $\sigma$ \cite[str. 52]{Martin2011}. \\
+jako stav, do kterého \mbox{konečný} automat (KA) přejde, pokud je ve stavu $q$ a na vstupu dostane $\sigma$ \cite[str. 53]{Martin2011}. \\
 
 Je-li $\forall q \in Q, \forall a \in \Sigma: |\delta(q, a)| \leq 1$, pak $M$ nazýváme \textit{deterministickým konečným automatem} 
 (zkráceně DKA), v~případě, že $\exists q \in Q, \exists a \in \Sigma:  |\delta(q, a)| >1$ pak \textit{nedeterministickým konečným automatem} 
@@ -221,7 +222,7 @@ $Q \times (\Sigma \cup \{\epsilon\}) \rightarrow 2^Q$ \cite[str. 43]{TIN2013}. K
 
 Jazyk přijímaný konečným automatem M označujeme symbolem $L(M)$ a definujeme ho jako množinu všech řetězců přijímaných automatem $M$:
 \begin{center}
-$L(M) = \{w | (q_0, w) \vdash^* (q, \epsilon) \wedge q \in F\}$
+$L(M) = \{w \ | \ (q_0, w) \vdash^* (q, \epsilon) \wedge q \in F\}$
 \end{center}
 \cite[str. 22]{TIN2013}. \\
 
@@ -411,7 +412,7 @@ $P = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$, kde
 \item $\Gamma$ je konečná abeceda zásobníkových symbolů
 \item $\delta$ je zobrazení $Q \times (\Sigma \cup \{\epsilon\}) \times \Gamma \rightarrow Q \times \Gamma^*$ popisující funkci přechodů
 \item $q_0 \in Q$ je počáteční stav řídící jednotky
-\item $Z_0 \in \Gamma$ je symbol, který je na počátku uložen na zásobníku -- tzv. \textit{startovací symbol} zásobníku
+\item $Z_0 \in \Gamma$ je symbol, který je na počátku uložen na zásobníku --- tzv. \textit{startovací symbol} zásobníku
 \item $F \subseteq Q$ je množina koncových stavů \cite[str. 81]{TIN2013}.
 \end{itemize}
 \vspace*{\baselineskip} 
@@ -484,7 +485,7 @@ Třída bezkontextových jazyků je uzavřena vzhledem k~operacím:
 \item inverznímu morfismu \cite[str. 96-97]{TIN2013}
 \end{itemize}
 \vspace*{\baselineskip}
-Bezkontextové jazyky nejsou uzavřeny vůči operacím průniku a doplňku \cite[str. 97]{TIN2013} \\.
+Bezkontextové jazyky nejsou uzavřeny vůči operacím průniku a doplňku \cite[str. 97]{TIN2013}. \\
 
 \textbf{Rozhodnutelné problémy bezkontextových jazyků} \\
 Ve třídě bezkontextových jazyků jsou rozhodnutelné:
@@ -495,19 +496,19 @@ Ve třídě bezkontextových jazyků jsou rozhodnutelné:
 \end{itemize}
 \vspace*{\baselineskip}
 Mezi nerozhodnutelné problémy patří například ekvivalence (pro nedeterministické bezkontextové jazyky) a inkluze jazyků bezkontextových gramatik 
-\cite[str. 99]{TIN2013}.
+\cite[str. 98]{TIN2013}.
 
 \section{Turingovy stroje} \label{sec:2:ts}
 Přestože v~této práci budeme pracovat převážně s~jazyky regulárními a bezkontextovými, je potřeba zmínit i další rodiny jazyků, se kterými se také 
 můžeme setkat. Povíme si, jak se jejich vlastnosti liší od již představených typů a především na co si musíme dávat pozor, pokud budeme chtít 
-vytvořit protokol, který bude založen na silnější než bezkontextové gramatice a jaké to má nevýhody. \\
+vytvořit protokol, který bude založen na silnější než bezkontextové gramatice, a jaké to má nevýhody. \\
 
 Nejdříve si ale představíme další typ automatu, který je významným stavebním kamenem nejen pro rozpoznávání jazyků, ale rovněž pro dokazování 
 rozhodnutelnosti problémů. \\
 
 \textit{Turingův stroj} zobecňuje konečné automaty ve 3 základních směrech. Za prvé, může číst a~zapisovat na pásku. Za druhé, hlava pro čtení 
 a zápis se může pohybovat po pásce oběma směry –- jak doprava, tak doleva. Nakonec, pásku lze bez omezení prodlužovat směrem doprava 
-\cite[str. 119]{Meduna2014}. \\
+\cite[str. 199]{Meduna2014}. \\
 
 \textit{Chuchrova (Church-Turingova) teze} také říká, že Turingovy stroje (a jim ekvivalentní systémy) definují svou výpočetní silou to, co intuitivně 
 považujeme za efektivně vypočitatelné. \cite[str. 102]{TIN2013}. \\
@@ -634,10 +635,10 @@ Třída rekurzivních jazyků je uzavřena vzhledem k~operacím:
 \end{itemize}
 \vspace*{\baselineskip}
 
-\textbf{Rozhodnutelné problémy rekurzivně vyčíslitelných jazyků} \\
-Ve třídě kontextových jazyků jsou rozhodnutelné:
+\textbf{Rozhodnutelné problémy rekurzivních jazyků} \\
+Ve třídě rekurzivních jazyků jsou rozhodnutelné:
 \begin{itemize}
-\item problém náležitosti ($w \in L$?) \cite[str. 122]{TIN2013}
+\item problém náležitosti ($w \in L$?) \cite[str. 133]{TIN2013}
 \end{itemize}
 \vspace*{\baselineskip}
 
@@ -651,13 +652,7 @@ Třída rekurzivně vyčíslitelných jazyků je uzavřena vzhledem k~operacím:
 \end{itemize}
 \vspace*{\baselineskip}
 
-\textbf{Rozhodnutelné problémy rekurzivně vyčíslitelných jazyků} \\
-Ve třídě kontextových jazyků jsou rozhodnutelné:
-\begin{itemize}
-\item problém náležitosti ($w \in L$?) \cite[str. 122]{TIN2013}
-\end{itemize}
-\vspace*{\baselineskip}
-
+\newpage
 S třídou rekurzivně vyčíslitelných jazyků také souvisí pojem \textit{Turingovská úplnost} (\textit{Turing completeness}), značící
 systémy mající ekvivalentní výpočetní sílu, jakou mají Turingovy stroje. Typickými zástupci jsou $\lambda$-kalkul, nebo parciálně-rekurzivní funkce
 \cite[str. 135]{TIN2013}. Patří sem ale i některé programovací jazyky, jakými jsou C, C++, nebo Prolog. \\
@@ -696,18 +691,18 @@ Důvěrnost představuje ochranu proti neoprávněnému prozrazení informace. P
 \textit{kontrolu přístupu} (stanovujeme pravidla a~politiku, která omezuje přístup k~citlivým informacím dle identity, či role), \textit{autentizaci} 
 (určení identity či role za pomocí hesla, otisku prstů, \dots), \textit{autorizaci} (určujeme, zda osoba či systém mají povolení přistupovat 
 ke zdrojům, na základě přístupové politiky) a \textit{fyzickou bezpečnost} (vytváříme fyzické překážky omezující přístup k~chráněným počítačovým 
-zdrojům - zámky, Faradayovu klec a další) \cite[str. 4-5]{Goodrich2011}. \\
+zdrojům --- zámky, Faradayovu klec a další) \cite[str. 4-5]{Goodrich2011}. \\
 
 \textbf{Integrita} (\textit{Integrity}) \\
 Integrita označuje ochranu proti neoprávněné modifikaci informace. Zde používáme například \textit{zálohy} (periodicky archivujeme data) 
-a \textit{kontrolní součty} (\textit{checksum} -- výpočet funkce, která mapuje obsah souboru na číselnou hodnotu, pomocí níž můžeme detekovat změny). 
+a \textit{kontrolní součty} (\textit{checksum} --- výpočet funkce, která mapuje obsah souboru na číselnou hodnotu, pomocí níž můžeme detekovat změny). 
 Kromě klasických dat můžeme mít zájem chránit i metadata \cite[str. 6-7]{Goodrich2011}. \\
 
 \textbf{Dostupnost} (\textit{Availability}) \\
 Dostupnost je ochrana proti neoprávněnému odepření přístupu k~datům nebo službám. K~těmto účelům využíváme 
 \textit{fyzickou ochranu} (infrastrukturu určenou k~uchovávání informací i v~případě fyzických výzev jakými jsou bouře, zemětřesení,\dots) 
 a \textit{výpočetní redundanci} (počítače a paměťová zařízení, která slouží jako zálohování 
-v~případě selhání -- například \textit{RAID})\cite[str. 7]{Goodrich2011}. \\
+v~případě selhání --- například \textit{RAID})\cite[str. 7]{Goodrich2011}. \\
 
 Většina útoků cílí právě na tyto aspekty. Útočník se snaží dostat k~citlivým údajům, jakými jsou například hesla, či čísla kreditních karet, 
 pokouší se modifikovat data, nebo znepřístupnit služby pro ostatní uživatele. \\
@@ -747,7 +742,7 @@ Manipulace s~daty obsahuje příkazy \texttt{SELECT}, \texttt{UPDATE}, \texttt{D
 U~těchto příkazů pracujeme s~tabulkami, nebo pohledy a výsledkem je tabulka \cite[str. 18]{ZendulkaIDS}.
 
 \begin{lstlisting}[language=sql]
-/* Vytvoření databáze s~názvem db1 */
+/* Vytvoření databáze s názvem db1 */
 MariaDB [(none)]> CREATE DATABASE db1;
 Query OK, 1 row affected (0.19 sec)
 
@@ -823,7 +818,7 @@ MariaDB [db1]> SELECT * FROM t1;
 +-----+-----+
 4 rows in set (0.00 sec)
 
-/* A~odstranit můžeme i celou databázi */
+/* A odstranit můžeme i celou databázi */
 MariaDB [db1]> DROP DATABASE db1;
 Query OK, 1 row affected (0.58 sec)
 
@@ -854,7 +849,7 @@ Pro lepší představu, jak takový útok vypadá, si představme následující
 tabulku \textit{authors}, která shromažďuje údaje o~autorech knih, kteří se registrovali v~rámci pomyslného informačního systému. \\
 
 Při registraci uživatel zadává své jméno, příjmení, rok narození a přihlašovací údaje skládající se z~emailové adresy a hesla. Dále také tabulka
-obsahuje informaci o~stavu uživatele -- zda je jeho účet aktivní, nebo ne. Podobu tabulky, potažmo databáze, lze vidět na obrázku \ref{fig:authors}. \\
+obsahuje informaci o~stavu uživatele --- zda je jeho účet aktivní, nebo ne. Podobu tabulky, potažmo databáze, lze vidět na obrázku \ref{fig:authors}. \\
 
 \begin{figure}[h!]
     \label{fig:authors}
@@ -865,7 +860,7 @@ obsahuje informaci o~stavu uživatele -- zda je jeho účet aktivní, nebo ne. P
 
 Hesla jsou záměrně ukládána v~otevřené podobě (tzv. \textit{plaintextu}), což umožňuje nejen jejich vypsání vlastníkům na základě filtrování dle 
 \textit{ID}, ale také daleko jednoduší prozrazení informací neautorizovanému uživateli. Pokud útočník najde způsob, jak se dostat k~záznamům 
-z~databáze, nemusí se už dále ani snažit -- znění přihlašovacích údajů má naservírované na stříbrném talíři. I~proto je velmi důležité, aby byla 
+z~databáze, nemusí se už dále ani snažit --- znění přihlašovacích údajů má naservírované na stříbrném talíři. I~proto je velmi důležité, aby byla 
 hesla ukládána v~šifrované podobě. Protože však toto téma již přesahuje zadání diplomové práce, zvědavý čtenář nechť si například přečte diskuzi 
 ohledně možností bezpečného ukládání hesel na \textit{Information Security Stack 
 Exchange}\footnote{\url{security.stackexchange.com/questions/211/how-to-securely-hash-passwords}}. \\
@@ -888,7 +883,7 @@ MariaDB [sqli-prevention]> SELECT * FROM authors;
 \end{figure}
 
 \Bat{} Celý výpis tedy není chtěným cílem a obecný dotaz \texttt{SELECT * FROM authors;} tedy pravděpodobně nevyužijeme. Můžeme ale předpokládat
-například dotaz \texttt{SELECT Name, Surname, Email, Password FROM authors WHERE ID = *** AND Active = 1;}, kde bude na místo \texttt{***}
+například dotaz \texttt{SELECT Name,\\Surname,Email,Password FROM authors WHERE ID = *** AND Active = 1;}, kde bude na místo \texttt{***}
 vložen vstup od uživatele. Pokud uživatel zadá číslo \texttt{1}, výstup bude následující:
 
 \begin{lstlisting}[language=sql]
@@ -924,7 +919,7 @@ MariaDB [sqli-prevention]> SELECT Name, Surname, Email, Password
 \end{lstlisting}
 
 Útočník se nám právě dostal ke všem záznamům a to dokonce i k~těm, které značí neaktivní uživatele a neměli by být vypisování vůbec.
-Jak je to možné? SQL dotaz zde byl vyhodnocen následovně -- nejdříve jsme, jako v~minulém případě, požádali o~všechny záznamy, kde
+Jak je to možné? SQL dotaz zde byl vyhodnocen následovně --- nejdříve jsme, jako v~minulém případě, požádali o~všechny záznamy, kde
 se hodnota ID rovná 1. Příkaz poté ale pokračuje a to logickým operátorem \texttt{OR}. Protože výraz \texttt{1 = 1} je vždy pravdivý,
 celá podmínka se vyhodnotí také jako pravdivá ve všech případech, i pokud ID není rovno jedné. Útočník navíc chytře zakomentoval
 zbytek původního dotazu, aby vyloučil další případné podmínky, či příkazy. Tímto poměrně jednoduchým způsobem jsme si vynutili
@@ -936,7 +931,7 @@ vrácení kompletně všech záznamů z~dané tabulky.\\
 díky čemuž rázem přicházíme o~veškerá data i se strukturou tabulky.
 
 \begin{lstlisting}[language=sql]
-/* Příkaz pro výpis všech tabulek v~databázi */
+/* Příkaz pro výpis všech tabulek v databázi */
 MariaDB [sqli-prevention]> SHOW TABLES;
 +---------------------------+
 | Tables_in_sqli-prevention |
@@ -969,8 +964,8 @@ Na příkladu výše je rovněž vidět další dotaz, který je pro útočníka
 \texttt{SHOW DATABASES;} získává přehled o~struktuře tabulek, či databází, čehož následně může využít při dalších útocích. \\
 
 Již Forristal\footnote{\url{phrack.org/issues/54/8.html}} upozorňoval, že situaci sice útočníkovi mírně zkomplikujeme,
-pokud jeho vstup budeme uvozovat \texttt{SELECT * FROM authors WHERE ID='***' AND Active = 1;} a tudíž se jeho vstup bude vyhodnocovat jako řetězec,
-ale i to lze obejít poměrně jednoduše. Útočníkovi stačí zadat například \texttt{SELECT * FROM authors WHERE ID='' OR 1=1; -{}- ' AND Active = 1;}
+pokud jeho vstup budeme uvozovat \texttt{SELECT * FROM authors WHERE ID='***' AND Active = 1;} a~tudíž se jeho vstup bude vyhodnocovat jako řetězec,
+ale i to lze obejít poměrně jednoduše. Útočníkovi stačí zadat například \texttt{SELECT * FROM authors WHERE ID='' OR 1=1; -{}- ' AND \\ Active = 1;}
 a získává stejný výsledek. \\
 
 Na závěr této podkapitoly si nelze nedovolit ještě jednu drobnou poznámku z~pohledu bezpečnosti. Kromě prvního příkladu jsme
@@ -999,7 +994,7 @@ ukončí uvozenou část pro svůj vstup a přidává následně své dotazy, ja
 jako řetězec. \\ 
 
 Tento přístup však funguje pouze za předpokladu, že je uživatelský vstup vkládán do jednoduchých uvozovek. Přestože tímto způsobem lze vkládat
-i celočíselné hodnoty, které jsou následně správně přetypovány, je zde jedna výjimka -- pokud chceme zadávat hodnotu LIMIT, je nejdříve nutné převést
+i celočíselné hodnoty, které jsou následně správně přetypovány, je zde jedna výjimka --- pokud chceme zadávat hodnotu LIMIT, je nejdříve nutné převést
 vstup na celočíselnou hodnotu, jinak bude dotaz zamítnut. \\
 
 Co je ale podstatnější, existují způsoby, jak tuto funkci 
@@ -1027,9 +1022,9 @@ V případě, že přeci jen potřebujeme povolit některé z výše uvedených,
 například s jakými tabulkami uživatel může pracovat, nebo že může řadit pouze pomocí klíčových slov \texttt{ASC} a~\texttt{DESC}.
 
 \section{Další příklady útoků} \label{sec:3:attacks}
-Kromě SQLi, popsaného v předchozí podkapitole tady zmíníme ještě jeden útok, který rovněž spadá do kategorie zranitelností, zaměřující se
+Kromě SQLi, popsaného v předchozí podkapitole, tady zmíníme ještě jeden útok, který rovněž spadá do kategorie zranitelností, zaměřující se
 na nedostatky při zpracování vstupu. Liší se však od injection útoků, kdy útočník mění syntax i sémantiku například SQL dotazů, či URL
-adresy a místo toho využívá různé \textit{interpretace} stejného vstupu. Řeč je o zranitelnostech ve standartu \textit{X.509}.
+adresy a místo toho využívá různé \textit{interpretace} stejného vstupu. Řeč je o~zranitelnostech ve standardu \textit{X.509}.
 
 \subsection{X.509} \label{subsec:3:x509}
 Již jsme zmínili, že jedním z~prostředků, jak zvyšovat bezpečnost, je použití autentizace, tedy ověřování identity. Jak ale provést něco takového 
@@ -1037,15 +1032,15 @@ na internetu, který je ze své podstaty anonymní? Jak si můžeme být jisti, 
 
 Běžně se používá kryptografie a elektronické podpisy, ale ty neřeší, kdo je majitelem privátního klíče. Proto používáme certifikáty veřejných klíčů, 
 což jsou datové struktury, které váží veřejné klíče k~subjektům. Tento certifikát je pak podepsán certifikační autoritou 
-(\textit{certification authority - CA}) \cite[str. 9-10]{RFC:X509}. \\
+(\textit{certification authority -- CA}) \cite[str. 9-10]{RFC:X509}. \\
 
 X.509 je standard popisující formát certifikátu, v~současné době používaný ve verzi 3. \mbox{Využívají} jej lidé, ale i procesy, které používají 
 klientský software a jsou subjekty uvedených v~certifikátech. Mezi ně patří uživatelé elektronické pošty, klienti webových prohlížečů, webové 
 servery a další \cite[str. 9-10]{RFC:X509}. X.509 nespecifikuje pouze formát certifikátů, ale i seznam zrušených certifikátů 
-(\textit{certificate revocation list – CRL}), parametry certifikátů a~metody kontroly platnosti certifikátů \cite[str. 130]{Slovnik2015}. \\
+(\textit{certificate revocation list -- CRL}), parametry certifikátů a~metody kontroly platnosti certifikátů \cite[str. 130]{Slovnik2015}. \\
 
 Jak a v~čem se projevují zranitelnosti standardu X.509? Jak uvádí článek \textit{PKI Layer Cake: New Collision Attacks Against the Global X.509 Infrastructure} 
-\cite[str. X]{Kaminsky2010}, je zde vícero kategorií, přičemž zmíníme především jednu, která dokazuje, proč je důležité, aby každé zpracování vstupních
+\cite[str. 1]{Kaminsky2010}, je zde vícero kategorií, přičemž zmíníme především jednu, která dokazuje, proč je důležité, aby každé zpracování vstupních
 dat probíhalo ekvivalentním způsobem. \\
 
 Pokud žádáme o~certifikát, zadáváme tzv. \textit{commom name} (CN), pod kterým je daný subjekt znám, 
@@ -1140,7 +1135,7 @@ ani zde. Komponenta rovněž musí být schopna odmítnou vstup bez toho, aniž 
 stavu \cite[str. 490]{Sass2013}. \\
 
 Pokud pak řešíme bezpečnost jako celek více navzájem komunikujících komponent, potřebujeme, aby byly zasílané zprávy vnímané identicky. Avšak jak říká 
-známé latinské přísloví: \textit{\uv{Duo cum faciunt idem, non est idem}} -- když dva dělají totéž, není to totéž. I~zde se projeví problém 
+známé latinské přísloví: \textit{\uv{Duo cum faciunt idem, non est idem}} --- když dva dělají totéž, není to totéž. I~zde se projeví problém 
 nerozhodnutelnosti, protože pokud bychom chtěli formálně dokázat, že nás systém zpracovává zprávy stejným způsobem, řešíme otázku ekvivalence gramatik, 
 což je nadlidský úkol pro gramatiky silnější než deterministicky bezkontextové. \\ 
 
@@ -1182,7 +1177,7 @@ Programy, které implementují protokoly s~jednoznačným vstupním jazykem moho
 
 Bohužel, v~praxi se stále nejčastěji spoléhá na ad-hoc analyzátory bez ohledu na jejich rozpoznávací sílu, což narušuje bezpečnost a vede k~mnoha 
 zranitelnostem \cite[str. 490]{Sass2013}. Přitom pro formální analýzu na kontrolu vstupu se dají se použít knihovny, či nástroje pro generování 
-kódu -- máme prokazatelně správné kombinátory analyzátorů a generátory se zárukou zastavení \cite[str. 490]{Sass2013}. \\
+kódu --- máme prokazatelně správné kombinátory analyzátorů a generátory se zárukou zastavení \cite[str. 490]{Sass2013}. \\
 
 Jak jsme uvedli v~kapitole \ref{ch:theory}, klasifikace podle Noama Chomského rozděluje gramatiky do hierarchie dle vyjadřovací síly, která koreluje 
 s~komplexností automatu, který přijímá jazyky vytvořené těmito gramatikami. Pro formální validaci vstupu tedy vyžadujeme automat (respektive analyzátor) 
@@ -1240,7 +1235,7 @@ nedostatky cílí převažující část chyb a zranitelností současné doby.
 \textbf{Ad-hoc zpracování vstupu} \\
 Vágní popis vstupních dat nejen komplikuje jejich rozpoznávání, ale i verifikaci.
 Místo toho je tedy nejdříve důležité pracovat s~popisem platných vstupních dat jako s~formálním jazykem, ať už přijímáme pakety, či zprávy, nebo 
-například url adresu. Součástí tohoto kroku je také snaha minimalizovat sílu jazyka, protože jak jsme uvedli výše, čím větší je vyjařovací síla 
+například url adresu. Součástí tohoto kroku je také snaha minimalizovat sílu jazyka, protože jak jsme uvedli výše, čím větší je vyjadřovací síla 
 jazyka, tím obtížnější je jeho rozpoznávání a pokud překročí hranici turingovsky-úplného jazyka, z~rozeznávání vstupu se stává nerozhodnutelný 
 problém. \\
 
@@ -1282,7 +1277,7 @@ Může tedy například uvést dotaz \texttt{SELECT Name, Surname FROM authors W
 částí je požadované příjmení osoby ze záznamů authors. \\
 
 SQL diagram, jak nazývají tento vzor, spolu s dotazem od uživatelem je následně převeden do XML reprezentace, které jsou následně vůči sobě porovnávány.
-Obě XML schémata se musí shodovat, výjma měnitelných částí, jejichž porovnávání se přeskakuje, jinak je detekován SQLi. \\
+Obě XML schémata se musí shodovat, vyjma měnitelných částí, jejichž porovnávání se přeskakuje, jinak je detekován SQLi. \\
 
 Jak jsem si již zmínili, nástroj je stále k dispozici a byl úspěšně přeložen na Fedoře 27, avšak nejedná se o jednoduchý proces, především kvůli 
 horší dostupnosti některých balíčků. Libdejector je rovněž potřeba spouštět s Pythonem ve verzi 2 kvůli implementačním požadavkům některých knihoven. \\
@@ -1296,7 +1291,7 @@ SQLi, ale i dalších typů injection útoků. \\
 
 Knihovna libinjection nabízí podporu pro celou škálu jazyků, jakými jsou C, C++, PHP, Python, Lua a Java. Základem je tvorba otisku (\textit{fingeprint}),
 který představuje hash posloupnosti rozeznaných tokenů, které následně srovnává s databázi známých SQLi útoků. Ty jsou získávány z publikovaných zpráv,
-veřějně dostupných návodů a nástrojů pro skenování SQLi zranitelností, aktuálně čítající přes 85 tisíc 
+veřejně dostupných návodů a nástrojů pro skenování SQLi zranitelností, aktuálně čítající přes 85 tisíc 
 příkladů\footnote{\url{www.client9.com/libinjection-from-sqli-to-xss-v2/}}. \\
 
 \Bat{} \textbf{Prevoty} \\
@@ -1305,7 +1300,7 @@ hlásí k~používání principů LangSecu, přičemž slibují ochranu před mn
 a heuristik. Využívají vlastní lexikální analyzátory, validátory a analyzátory pro efektivní analýzu a identifikace škodlivého chování. \\
 
 Ve svém technickém přehledu, odkazovaném ze stejné stránky, také uvádějí až poněkud přehnaně vypadající tvrzení, že takovéto zpracování vstupu 
-je 30-50krát rychlejší, než u~vyhledávání řetězců a regulárních výrazů. \\
+je 30--50krát rychlejší, než u~vyhledávání řetězců a regulárních výrazů. \\
 
 \Bat{} \textbf{Hammer} \\
 Ve výčtu příkladů aplikací využívajících směru LangSec by rozhodně neměla chybět zmínka o tomto nástroji, který se ještě více zaměřuje na vývojáře,
@@ -1323,7 +1318,7 @@ vedlo ke zranitelnosti v síťovém protokolu Samba, díky které bylo možné v
 \Bat{} \textbf{SQLi Firewall} \\
 V další kapitole si představíme novou aplikaci zaměřující se na detekci SQL injection útoků vytvořenou pro potřeby diplomové práce. 
 Představená metoda vychází a inspiruje se jak nástrojem Libdejector, tak libinjection v smyslu, že jako oba představené, klade důraz na správné
-rozpoznávání SQL jazyka. Přínáší ale odlišný pohled na tento útok, který je podle autorky reprezentovaný nejen změnou syntaxe a sémantiky, ale
+rozpoznávání SQL jazyka. Přináší ale odlišný pohled na tento útok, který je podle autorky reprezentovaný nejen změnou syntaxe a sémantiky, ale
 také porušením a vystoupením z množiny povolených operací nad databází, tak jak ji předpokládat tvůrce dotazů. Rozdílnost pohledu se promítá
 do všech fází vyhodnocování bezpečnosti dotazu, jak v rámci definování vstupů, reprezentace zpracovaného dotazu, tak samotného vyhodnocování.
 To vše za cílem ještě více zpřesnit schopnosti identifikovat rozdílnosti, které by mohli značit SQLi.
@@ -1334,7 +1329,7 @@ To vše za cílem ještě více zpřesnit schopnosti identifikovat rozdílnosti,
 
 \chapter{SQLi Firewall} \label{ch:sqlifirewall}
 V~této kapitole si představíme aplikaci, která vznikla na základě filosofie LangSecu, s~jejíž pomocí 
-detekuje útoky SQL injection. Název nebyl vybrán náhodou -- podobně, jako síťový firewall provádí inspekci provozu a propouští pouze data, která 
+detekuje útoky SQL injection. Název nebyl vybrán náhodou --- podobně, jako síťový firewall provádí inspekci provozu a propouští pouze data, která 
 považuje za bezpečná, SQLi Firewall zkoumá vstupy od uživatelů a kontroluje, zda neobsahují záměrně přetvořené dotazy. SQLi pak značí právě
 SQL injection. Aplikace je dostupná i na veřejném repositáři na adrese: \url{https://github.com/regeciovad/sqli-prevention}
 
@@ -1353,7 +1348,7 @@ GNU Bison 3.0.4\footnote{\url{www.gnu.org/software/bison/}}. \\
 Aplikace byl vyvíjena na 64-bitovém operačním systému Fedora 27 a je rovněž spustitelná na školních serverech \url{eva.fit.vutbr.cz} 
 a \url{merlin.fit.vutbr.cz}. \\
 
-Po překladu za pomocí příkazu \texttt{make} lze aplikaci spoustit pomocí příkazu:
+Po překladu za pomocí příkazu \texttt{make} lze aplikaci spustit pomocí příkazu:
 
 \begin{lstlisting}[language=bash]
 $ ./firewall access_mode sql_query user_input
@@ -1406,12 +1401,12 @@ přijímat pomocí konečných automatů. V~tomto případě tedy nepotřebuje a
 věta (konkrétní oprávnění) patří do jazyka Access Mode.
 
 \section{Firewall} \label{sec:6:firewall}
-SQLi Firewall dostává na svůj vstup tři argumenty -- Access Mode, SQL dotaz s~vyznačeným místem \texttt{***} pro doplnění a uživatelský vstup, který
-jsme získali od uživatele. V~samotném programu pak dále pracujeme s~pomyslnými dvěma dotazy -- originálním dotazem s~\texttt{***} a~již 
+SQLi Firewall dostává na svůj vstup tři argumenty --- Access Mode, SQL dotaz s~vyznačeným místem \texttt{***} pro doplnění a uživatelský vstup, který
+jsme získali od uživatele. V~samotném programu pak dále pracujeme s~pomyslnými dvěma dotazy --- originálním dotazem s~\texttt{***} a~již 
 upraveným dotazem, kde byl vložen uživatelský vstup a potencionálně může obsahovat SQLi. Pokud jej firewall vyhodnotí jako nebezpečný,
 vrací číslo $1$, jinak je jeho návratová hodnota nulová. \\
 
-Očekávaný vstup může uživatel zadat třemi způsoby -- pokud požaduje řetězec, vkládá do dotazu \texttt{'***'}, v případě identifikátorů,
+Očekávaný vstup může uživatel zadat třemi způsoby --- pokud požaduje řetězec, vkládá do dotazu \texttt{'***'}, v případě identifikátorů,
 jakými jsou například jména tabulek a sloupců, je potřeba použít zpětných uvozovek (\textit{backtick}) \texttt{\`{}***\`}, ve všech dalších 
 případech stačí \texttt{***}. \\
 
@@ -1426,9 +1421,9 @@ V~dalším kroku procházíme seznam tokenů a kontrolujeme, zda mají dotazy do
 v~momentě, kdy firewall kontroluje právo na příkaz \texttt{SELECT}, již ví, že pracujeme s~tabulkou \textit{authors}. Pokud v~rámci dotazu pracujeme s~vícero
 tabulkami, musí mít oprávnění každá z~nich. \\
 
-V~posledním kroku se ještě kontroluje posloupnost tokenu obou dotazů. Je to pro případ nepříjemného SQLi 
+V~posledním kroku se ještě kontroluje posloupnost tokenů obou dotazů. Je to pro případ nepříjemného SQLi 
 \texttt{SELECT * FROM authors WHERE Name='Terry' OR 1;}, který sice neporušuje předchozí podmínky, přesto je potřeba detekovat i útoky tohoto typu.
-Zatím je tato poslední kontrola nastavena poměrně přísně -- stačí detekce přesahu řetězce, či 1 hodnoty, což znemožňuje například 
+Zatím je tato poslední kontrola nastavena poměrně přísně --- stačí detekce přesahu řetězce, či 1 hodnoty, což znemožňuje například 
 \texttt{SELECT * FROM authors WHERE Name = char(084,101,114,\\114,121);}, ačkoliv je tento dotaz shodný s~příkazem výše a rovněž vyhledává záznamy
 autorů s~křestním jménem \uv{Terry}. 
 
@@ -1468,7 +1463,7 @@ poslední číslo je návratová hodnota, 1 pro ukončení s~chybou, 0 bez chyby
 
 \texttt{SELECTALL} je token nahrazující \texttt{*} vybírající všechny sloupce tabulky, \texttt{CMP 4;WHERE;} je podmínka ve \texttt{WHERE} klauzuli
 testující rovnost a \texttt{SELECT 0 1 1} lze přeložit jako \texttt{SELECT} bez dodatečných voleb pracující s~jednou tabulkou a vracející jeden, respektive
-všechny sloupce. Části dotazu, které jsou vyhodnoceny jako řetězce jsou nahrazeny za \texttt{***}. Jakmile byly lexémy rozpoznány jako řetezce,
+všechny sloupce. Části dotazu, které jsou vyhodnoceny jako řetězce jsou nahrazeny za \texttt{***}. Jakmile byly lexémy rozpoznány jako řetězce,
 nemohou negativně ovlivnit vyhodnocování dotazu.
 
 \subsection{Citlivost na velikost písmen} \label{subsec:6:casesensitive}
@@ -1499,7 +1494,7 @@ To však lze jednoduše napravit menší úpravou dotazu:
 SELECT * FROM authors WHERE Name='' OR 1; -- '';
 \end{lstlisting}
 
-kdy středník jednoduše doplníme před začátkem komentáře. Nyní je SQL dotaz správný, i když obsahuje SQLi od uživatele.
+kdy středník jednoduše doplníme před začátkem komentáře. Nyní je SQL dotaz správný, i~když obsahuje SQLi od uživatele.
 Zde také můžeme doplnit rovněž důležitou skutečnost a to poukázání na nutnou mezeru po \uv{-{}-} symbolech, jak uvádí dokumentace 
 MariaDB\footnote{\url{mariadb.com/kb/en/library/comment-syntax/}}.
 
@@ -1512,7 +1507,7 @@ Maximální délku identifikátorů aplikace neřeší, ve většině případů
 Aplikace rozeznává rovněž \textbf{uživatelské proměnné}, přestože jejich použití překračuje bezkontextové vlastnosti jazyka, a to z~toho důvodu, že by
 se mohly vyskytnout v~ověřovaném dotazu. V~úplném jazyku SQL slouží pro vytváření proměnných přístupných pouze v~rámci sezení konkrétnímu uživateli, 
 ke kterým nemá přístup nikdo jiný. Jejich jména začínají symbolem @ a skládají se z~povolených znaků [0-9a-zA-Z.\$\_]. Proměnné mohou být rovněž
-uvozeny -- do zpětných, jednoduchých i dvojitých uvozovek, vždy po počátečním symbolu (\textit{@'var\_name'}). \\
+uvozeny --- do zpětných, jednoduchých i dvojitých uvozovek, vždy po počátečním symbolu (\textit{@'var\_name'}). \\
 
 O~\textbf{datových typech} si zmíníme jen stručně, protože se příliš neliší od jiných běžných jazyků. Binární a hexadecimální čísla jsou převáděny
 na textové řetězce pro zjednodušené rozpoznávání. SQLi Firewall dále pracuje s~typy bool, celými a desetinnými čísly a řetězci. \\
@@ -1946,7 +1941,7 @@ SELECT 0 1 1;STMT;1;0;
 SELECT a, COUNT(b) FROM test_table GROUP BY a DESC;
 /* RPN výstup : */
 NAME a;NAME b; CALL 1 COUNT;TABLE test_table;NAME a;
-GROUPBY 1;GROUPBYLIST 1 0; SELECT 0 2 1;STMT;1;0;
+GROUPBY 2;GROUPBYLIST 1 0; SELECT 0 2 1;STMT;1;0;
 \end{lstlisting}
 
 \subsection{UNION} \label{subsec:6:union}
@@ -2228,7 +2223,7 @@ post.blog_id;CMP 4;WHERE;DELETE MULTI 0 1 1;STMT;1;0;
 \end{lstlisting}
 
 \subsection{REPLACE TABLE} \label{subsec:6:replacetbl}
-\texttt{REPLACE} funguje stejně jako \texttt{INSERT}, s jednou výjimkou -- pokud je vkládaný řádek již v~tabulce obsažen
+\texttt{REPLACE} funguje stejně jako \texttt{INSERT}, s jednou výjimkou --- pokud je vkládaný řádek již v~tabulce obsažen
  (vyhodnoceno na základě primárního klíče, nebo unikátní hodnoty), je nejdříve smazán a poté je vložena jeho nová podoba. 
  Potřebuje jak oprávnění \textit{delete}, tak \textit{insert}. \\
 
@@ -2357,7 +2352,7 @@ DABATABASE db_name; USE;
 /* Dotaz: */
 USE db1;
 /* RPN výstup : */
-SHOW DATABASES;STMT;1;0;
+DATABASE db1;USE;STMT;1;0;
 \end{lstlisting}
 
 \subsection{DESCRIBE} \label{subsec:6:describe}
@@ -2442,10 +2437,10 @@ analýzu je možné dále rozšiřovat, například v oblasti rozpoznávaní fun
 SQL příkazů dobré výsledky.
 
 \subsection{Testování rozpoznávání SQLi}
-Testování na samotné SQLi je rozděleno do dvou složek -- první, pojmenovaná jako \texttt{ok}, obsahuje příklady bezpečných dotazů, druhá složka 
+Testování na samotné SQLi je rozděleno do dvou složek --- první, pojmenovaná jako \texttt{ok}, obsahuje příklady bezpečných dotazů, druhá složka 
 \texttt{nope} pro změnu ukázky dotazů s SQLi. V obou případech zde nalezneme tři soubory, obsahující postupně Access Mode, SQL dotaz a pomyslný vstup 
 od uživatele. Skript \texttt{firewall\_tests.sh} postupně prochází obě tyto složky, nad kterými spouští kontrolu firewallu a výsledek jednotlivých 
-dotazů porovnává s návratovou hodnotou aplikace. Pro složku \texttt{ok} předpokládá nulový výsledek, pro \texttt{nope} hodnoty 1. Inspirací pro 
+dotazů porovnává s~návratovou hodnotou aplikace. Pro složku \texttt{ok} předpokládá nulový výsledek, pro \texttt{nope} hodnoty 1. Inspirací pro 
 dotazy byly opět dokumentace zmíněné výše, ale i hned několik článků zabývající se problematikou útoku SQL injection. Jejich úplný seznam lze nalézt 
 v~souboru \texttt{zdroje.txt} ve složce \texttt{sqli-prevention/firewall/tests}. \\
 
@@ -2513,7 +2508,7 @@ jako předchozí dvě navrhované, lze si představit situace, kdy je využito p
 
 Během práce na aplikaci také vznikl návrh na modifikaci, alternativní implementaci, pracovně pojmenovanou jako \textit{SQLi Firewall v2.0}. 
 Na rozdíl od původní verze by byly úlohy jednotlivých částí více propojeny a vyhodnocování bezpečnosti SQL dotazů by bylo prováděno během 
-syntaktické analýzy. Princip by zůstal zachován -- ukládali bychom si průběžně informace o používaných tabulkách a v momentě rozeznání dotazu 
+syntaktické analýzy. Princip by zůstal zachován --- ukládali bychom si průběžně informace o používaných tabulkách a v momentě rozeznání dotazu 
 by došlo ke kontrole oprávnění. Stejně tak by zde bylo možné kontrolovat počet rozpoznaných příkazů. Samotná část firewallu by měla na starost 
 pouze rozpoznávání Access Mode oprávnění a výsledné srovnávání posloupnosti tokenů. Není to sice návrhově tak čisté řešení, jako původní varianta, 
 ale dá se zde předpokládat navýšení rychlosti zpracování, jak v případě detekce SQLi, tak v případě kontroly bezpečného dotazu. Protože však nakonec
@@ -2531,7 +2526,7 @@ zmínili na prvních stránkách. Znovu si můžeme pokládat až řečnickou ot
 Přestože odpověď leží daleko za hranicemi této práce, nastínili jsme si již v této části alternativní způsob pohlížení na bezpečnost. Tento přístup, 
 také nazývaný LangSec nám říká, že velká část potíží se zajištěním bezpečnosti není o štěstí, respektive smůle vývojářů, ale o~jejich podceňování 
 důležitosti správného rozpoznávání vstupních dat. Tímto směrem jsme se dále zabývali v rámci celého textu, kdy jsme na něj nahlíželi jak z pohledu 
-teoretického, tak praktického a na jeho základech jsme rovněž představili implementaci metody detekce SQL injetcion útoků. \\
+teoretického, tak praktického a na jeho základech jsme rovněž představili implementaci metody detekce SQL injection útoků. \\
 
 Předtím jsme ale v \ref{ch:theory}. kapitole věnovali pozornost shrnutí poznatků z teorie formálních jazyků, především se zaměřením na Chomského 
 hierarchii a s~ohledem na algoritmickou řešitelnost problémů, jakými jsou například náležitost věty do jazyka nebo ekvivalence dvou gramatik. 
