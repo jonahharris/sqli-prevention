@@ -200,8 +200,7 @@ class Firewall
             }
 
             // Krok 2: kontrola AM (hledani klicovych slov v kazdem dotazu (rozdelit dle STMT;))
-            // !!! To Do
-            // SELECTALL;TABLE authors;NAME name;STRING 'Terry';CMP 4;WHERE;SELECT 0 1 1;STMT;1;0;
+            // Priklad: SELECTALL;TABLE authors;NAME name;STRING 'Terry';CMP 4;WHERE;SELECT 0 1 1;STMT;1;0;
             istringstream iss(this->parsed_untrusted);
             string command;
             vector<bitset<4>>tt;
@@ -216,7 +215,6 @@ class Firewall
                 // pro kazdy dotaz resime prava zvlast
                 if (command == "STMT")
                     tt.clear();
-                // SELECTALL TABLE authors NAME name STRING 'Terry' CMP 4 WHERE SELECT 0 1 1
                 unsigned int i;
                 for (i = 0; i < commands.size(); i++)
                 {
