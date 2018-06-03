@@ -32,7 +32,12 @@ class Firewall
             // Vlozeni uzivatelskeho vstupu do dotazu
             size_t index = 0;
             this->untrusted = this->sql_query;
-            index = this->untrusted.find("***", index);
+            index = this->untrusted.find("***");
+            if (index == std::string::npos)
+            {
+                cout << "V SQL dotazu chybi ***!" << endl; 
+                exit(RESULT_FAILURE);
+            }
             this->untrusted.replace(index, 3, user_input);
 
             this->parsed_sql = "";
